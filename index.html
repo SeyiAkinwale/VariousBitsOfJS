@@ -10,18 +10,18 @@
 
 <body>
   Hello world
-  <ol id="props" style="column-count:3"></ol>
-  
-  <script src="script.js">
-    (function printProps
-     {
-    const list=document.getElementById('props')
-    let property = null
-      for(property in window)
-        {if(property){list.innerHTML += '<li>' + property}}
-     }
-    ) ()
-  </script>
+<ol id="props" style="column-count:3"></ol>
+
+<script>
+  (function()
+   {
+    const list = document.getElementById('props');
+    for (const property in window) {
+      list.innerHTML += '<li>' + property + '</li>';
+    }
+  }
+  )();
+</script>
 
 </body>
 
