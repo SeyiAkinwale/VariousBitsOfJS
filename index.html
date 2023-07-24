@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+  <h3>Addressing array with IIFE to see DOM document child objects info</h3>
   <form>
     <img src="user.png" alt="User" height="64" width="64">
     <input type="text" name="topic" size="30"
@@ -24,16 +24,12 @@
    (()=>
      {
        const list=document.getElementById('list')
-       list.innerHTML="<li>No. Forms:"+document.forms.length
-       list.innerHTML+="<li>No. Links:"+document.links.length
+       list.innerHTML= "<li>No. of Forms:"+document.forms.length
+       list.innerHTML+="<li>No. of Links:"+document.links.length
+       list.innerHTML+="<li>No. of Images"+document.images.length
+       list.innerHTML+="<li>No. of Scripts:"+document.scripts.length
      })();
-  
- // (() => {
-    const list = document.getElementById('props');
-    for (property in window) 
-    {list.innerHTML += '<li>' + property + '</li>';
-    }
-//  })();
+
 </script>
 
 </body>
