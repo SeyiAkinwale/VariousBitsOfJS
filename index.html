@@ -17,8 +17,17 @@
     <a href="formhelp.html" style="margin:5px">Help?</a>
   
   </form>
+
+  <ul id="list"></ul>
   
 <script>
+   (()=>
+     {
+       const list=document.getElementById('list')
+       list.innerHTML="<li>No. Forms:"+document.forms.length
+       list.innerHTML+="<li>No. Links:"+document.links.length
+     })();
+  
  // (() => {
     const list = document.getElementById('props');
     for (property in window) 
